@@ -1,0 +1,68 @@
+// Primary
+
+$color-primary: #042a8d;
+$color-primary-dark: #03206b;
+$color-primary-hover: #062277;
+$color-primary-light: #3d62b8;
+
+// Secondary / Dark
+
+$color-secondary: #f5b82e;
+$color-secondary-dark: #e5a817;
+$color-secondary-light: #123477;
+
+// Accent
+
+$color-accent: #072032;
+$color-accent-hover: #e5a817;
+
+// Text
+
+$color-heading: #061b4f;
+$color-text: #526078;
+$color-text-light: #7d899f;
+
+// Background
+
+$color-white: #ffffff;
+$color-black: #071126;
+
+$color-background: #ffffff;
+$color-background-light: #f4f7fc;
+$color-background-green: #edf2fc;
+$color-background-dark: #061b4f;
+
+// Border
+
+$color-border: #dce3f0;
+$color-border-light: #ebeff6;
+
+// Grey / Transparent
+
+$color-grey-1: #ffffff91;
+
+// -------------------------------------------------------
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$line-height-tight: 1.1;
+$line-height-heading: 1.2;
+$line-height-normal: 1.6;
+$line-height-relaxed: 1.75;
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;

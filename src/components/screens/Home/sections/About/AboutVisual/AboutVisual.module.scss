@@ -1,0 +1,150 @@
+.visual {
+  position: relative;
+
+  width: 100%;
+  max-width: 800px;
+
+  aspect-ratio: 1 / 1;
+
+  background: $color-background-green;
+  overflow: hidden;
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.25) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba($color-primary-light, 0.25) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+}
+
+.image {
+  position: absolute;
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Top-right image */
+
+.imageTopRight {
+  top: 0;
+  right: 0;
+
+  width: 45%;
+  height: 48%;
+}
+
+/* Large left image */
+
+.imageMain {
+  left: 0;
+  bottom: 7%;
+
+  width: 54%;
+  height: 72%;
+}
+
+/* Bottom-right image */
+
+.imageBottomRight {
+  right: 0;
+  bottom: 0;
+
+  width: 40%;
+  height: 43%;
+}
+
+/* Center badge */
+
+.badge {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 48%;
+  left: 58%;
+
+  width: 35%;
+  aspect-ratio: 1;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: $color-white;
+
+  box-shadow: 0 0 0 12px rgba($color-white, 0.8);
+}
+
+.badge img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* Tablet */
+
+@media (max-width: $breakpoint-md) {
+  .visual {
+    max-width: 650px;
+  }
+
+  .badge {
+    width: 32%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: $breakpoint-sm) {
+  .visual {
+    aspect-ratio: 0.95;
+  }
+
+  .imageTopRight {
+    width: 45%;
+    height: 42%;
+  }
+
+  .imageMain {
+    width: 55%;
+    height: 68%;
+  }
+
+  .imageBottomRight {
+    width: 40%;
+    height: 40%;
+  }
+
+  .badge {
+    width: 36%;
+  }
+}

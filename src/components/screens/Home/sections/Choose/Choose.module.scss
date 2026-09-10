@@ -1,0 +1,94 @@
+.ChooseSection {
+  background-image: url("/banner.jpg");
+  position: relative;
+  padding: 50px 0 350px 0;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(
+      to right,
+      rgba($color-background-dark, 1),
+      rgba($color-secondary, 0.7)
+    );
+  }
+
+  .cont {
+    position: relative;
+    z-index: 100;
+  }
+
+  .cards {
+    padding: 50px;
+    position: absolute;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .cardsSm {
+    padding: 50px;
+    position: absolute;
+    z-index: 100;
+    display: none;
+  }
+
+  @include respond-below(md) {
+    .cards {
+      display: none;
+    }
+
+    .cardsSm {
+      display: block;
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .txt {
+    padding: 40px;
+
+    h3 {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $color-border;
+    }
+
+    p {
+      padding-top: 20px;
+    }
+  }
+
+  .img {
+    height: 150px;
+    background-image: url("/card1.webp");
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    @include flexCenter;
+    .icon {
+      height: 85px;
+      width: 70px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $color-secondary;
+      padding: 10px;
+      border-radius: 10px;
+      position: absolute;
+      top: -50px;
+      right: 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

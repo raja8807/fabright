@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: $color-background;
+  background-image: url("/sun.jpg");
+  background-position: bottom;
+  height: 120vh;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(to right, $color-background-dark, transparent);
+  }
+
+  .img {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 60%;
+  }
+
+  .cont {
+    height: 100%;
+    position: relative;
+
+    .left {
+      height: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+        color: $color-secondary;
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 0.98462;
+        letter-spacing: -2.4px;
+        color: white;
+
+        span {
+          color: $color-secondary;
+        }
+      }
+      h2 {
+        color: $color-grey-1;
+        font-size: 21px;
+        line-height: 1.5;
+        letter-spacing: -0.42px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .cont {
+      .left {
+        text-align: center;
+        align-items: center;
+
+        h1 {
+          font-size: 50px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

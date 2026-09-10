@@ -1,0 +1,152 @@
+.Footer {
+  //   min-height: 680px;
+  //   padding: 500px;
+  background-color: #072032;
+
+  .contact {
+    width: 100%;
+    border: 1px solid #2c4151;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .contactBox {
+      border: 1px solid #2c4151;
+      @include flexCenter;
+      cursor: pointer;
+      height: 170px;
+
+      .content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .icon {
+          background-color: $color-secondary;
+          height: 50px;
+          aspect-ratio: 1 / 1;
+          @include flexCenter;
+          border-radius: 50%;
+
+          svg {
+            fill: $color-primary;
+            font-size: 20px;
+          }
+        }
+
+        .text {
+          color: white;
+          h5 {
+            font-size: 20px;
+          }
+        }
+      }
+
+      &:hover {
+        .icon {
+          background-color: white;
+        }
+
+        .content {
+          h5 {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid #2c4151;
+
+    .brand {
+      img {
+        border-radius: 12px;
+      }
+
+      .socials {
+        display: flex;
+        gap: 4px;
+        margin-top: 10px;
+      }
+
+      .socials {
+        a {
+          width: 50px;
+          height: 50px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background: $color-primary;
+
+          color: $color-white;
+
+          font-size: 18px;
+
+          text-decoration: none;
+
+          &:hover {
+            background: $color-secondary;
+          }
+        }
+      }
+    }
+
+    .links {
+      h5 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      a {
+        display: block;
+        margin: 4px 0;
+        color: $color-text-light;
+        &:hover {
+          color: white;
+        }
+        // font-size: 18px;
+      }
+    }
+
+    .address {
+      h2 {
+        color: $color-secondary;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: $color-white;
+        margin-bottom: 10px;
+      }
+
+      strong {
+        color: $color-text-light;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .contact {
+      grid-template-columns: 1fr;
+    }
+
+    .body {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      text-align: center;
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

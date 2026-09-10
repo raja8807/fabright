@@ -1,0 +1,63 @@
+.SectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 50px;
+
+  .textTag {
+    padding: 3.5px 10px;
+    border-radius: 5px;
+    background-color: $color-primary;
+    color: white;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 1.037;
+    letter-spacing: -1px;
+  }
+
+  .caption {
+    letter-spacing: -0.36px;
+    max-width: 700px;
+    color: $color-text;
+  }
+
+  &.centered {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  &.variant_1 {
+    h2 {
+      color: $color-heading;
+    }
+
+    .caption {
+      color: $color-text;
+    }
+  }
+  &.variant_2 {
+    h2 {
+      color: white;
+    }
+
+    .caption {
+      color: white;
+    }
+  }
+
+  @include respond-below(md) {
+    h2 {
+      font-size: 40px;
+    }
+  }
+}

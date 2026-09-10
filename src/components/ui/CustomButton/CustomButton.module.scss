@@ -1,0 +1,25 @@
+.CustomButton {
+  width: fit-content;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &.variant_1 {
+    color: $color-primary;
+    border: 1px solid white;
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+  &.variant_2 {
+    color: white;
+    border: 1px solid white;
+    background-color: $color-primary;
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+}
