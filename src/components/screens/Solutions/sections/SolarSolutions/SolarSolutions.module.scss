@@ -1,0 +1,75 @@
+.ProjectsSection {
+  padding: 100px 0 150px 0;
+  background-color: $color-background-light;
+
+  .projectCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+    gap: 20px;
+    // padding: 0 24px;
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.ProjectCard {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 43.505px 72.509px rgba(104, 104, 104, 7%);
+  cursor: pointer;
+  .imgWrap {
+    // height: 350px;
+
+    .img {
+      background-color: white;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-size: contain;
+      // border-radius: 0 0 0 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .txt {
+    padding: 30px 25px;
+    position: relative;
+
+    h3 {
+      color: $color-primary;
+    }
+    p {
+      margin-top: 16px;
+      color: $color-text;
+    }
+
+    .button {
+      position: absolute;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      top: -40%;
+      right: 24px;
+      background-color: $color-primary;
+      border: 5px solid white;
+      cursor: pointer;
+
+      @include flexCenter;
+
+      svg {
+        path {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 43.505px 72.509px rgba(74, 74, 74, 0.07);
+  }
+}

@@ -5,14 +5,9 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Offcanvas, Image } from "react-bootstrap";
 import styles from "./MenuButton.module.scss";
+import { NAV_LINKS } from "@/constants/constants";
 
-const NAV_LINKS = [
-  { title: "Home", href: "/" },
-  { title: "About Us", href: "/about" },
-  { title: "Solutions", href: "/solutions" },
-  { title: "Projects", href: "/projects" },
-  { title: "Sustainability", href: "/sustainability" },
-];
+
 
 const MenuButton = () => {
   const [show, setShow] = useState(false);

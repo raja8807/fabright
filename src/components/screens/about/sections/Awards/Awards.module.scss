@@ -1,0 +1,38 @@
+.AwardsSection {
+  // background-color: $color-background-green;
+  // background-color: #b1d5ef;
+  // height: 100vh;
+  padding: 100px 0;
+
+  background-image: url("/images/award-b.jpg");
+
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(to right, $color-background-dark, transparent);
+  }
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    // background-color: red;
+
+    .right {
+      @include flexCenter;
+      img {
+        height: 450px;
+        width: auto;
+      }
+    }
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

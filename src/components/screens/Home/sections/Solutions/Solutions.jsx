@@ -36,18 +36,7 @@ const SolutionsSection = () => {
       text: "Sustainable water solutions, straight from the sun.",
       icon: "/images/solutions/sunlight-icon-6.png",
     },
-    // {
-    //   title: "Solar Rooftops 4",
-    //   text: "We offer professional solar panel installation services .Team of experienced technicians will ensure it is installed correctly.",
-    // },
-    // {
-    //   title: "Solar Rooftops 5",
-    //   text: "We offer professional solar panel installation services .Team of experienced technicians will ensure it is installed correctly.",
-    // },
-    // {
-    //   title: "Solar Rooftops 6",
-    //   text: "We offer professional solar panel installation services .Team of experienced technicians will ensure it is installed correctly.",
-    // },
+   
   ];
 
   return (

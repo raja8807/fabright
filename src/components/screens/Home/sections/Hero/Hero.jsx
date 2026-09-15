@@ -9,7 +9,7 @@ import CustomButton from "@/components/ui/CustomButton/CustomButton";
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <Header />
+      
       <div className={styles.overlay}></div>
 
       <Image

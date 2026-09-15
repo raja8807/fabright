@@ -1,0 +1,85 @@
+.WorkProcessSection {
+  //   height: 70vh;
+  background-color: $color-primary;
+  border-top: 10px solid $color-secondary;
+  padding: 50px 0 100px 0;
+
+  .head {
+    position: relative;
+
+    .header {
+    }
+
+    .float {
+      width: 100%;
+      height: 280px;
+      background-color: red;
+      background-image: url("/images/solar.webp");
+      background-size: cover;
+      background-position: bottom;
+      margin-bottom: 50px;
+      border: 10px solid $color-secondary;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    // justify-content: center;
+    gap: 20px;
+    padding: 0 40px;
+
+    .card {
+      //   max-width: 200px;
+
+      color: white;
+
+      h5 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: $color-secondary;
+      }
+
+      p {
+        opacity: 0.9;
+      }
+
+      img {
+        filter: invert(1);
+        height: 75px;
+      }
+    }
+  }
+
+  .btn {
+    width: fit-content;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  @include respond-below(md) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+
+      .card {
+      }
+    }
+  }
+
+  @include respond-above(md) {
+    .head {
+      .header {
+        max-width: 55%;
+      }
+
+      .float {
+        position: absolute;
+        width: 45%;
+        right: 0px;
+        top: -120px;
+      }
+    }
+  }
+}

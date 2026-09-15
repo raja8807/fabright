@@ -1,0 +1,21 @@
+.FriendlinessSection {
+  // background-color: $color-background-green;
+  background-color: #b1d5ef;
+  // height: 100vh;
+  padding: 300px 0 100px 0;
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .right {
+      img {
+        width: 100%;
+      }
+    }
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

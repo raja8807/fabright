@@ -1,0 +1,30 @@
+.OverviewSection {
+  background-image: url("/images/solar.webp");
+  background-size: cover;
+  padding: 200px 0 100px 0;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(to right, $color-background-dark, transparent);
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  @include respond-below(md) {
+    .wrap {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

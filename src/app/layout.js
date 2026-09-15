@@ -4,13 +4,14 @@ import "../styles/globals.scss";
 // import Footer from "@/components/layout/Footer/Footer";
 import FONTS from "@/styles/fonts";
 import AOSProvider from "@/components/layout/AOSProvider/AOSProvider";
+import Header from "@/components/layout/Header/Header";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <AOSProvider>
-          {/* <Header /> */}
+          <Header />
           <main style={{ flex: 1 }} className={FONTS.font1}>
             {children}
             <Footer />
