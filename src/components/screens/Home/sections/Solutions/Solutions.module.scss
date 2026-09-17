@@ -34,22 +34,49 @@
     .card {
       //   max-width: 200px;
 
-      color: white;
+      background-color: white;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      border-radius: 20px;
+      img {
+        height: 85px;
+        filter: invert(1);
+        // background-color: $color-primary;
+        // padding: 20px;
+        // border-radius: 20px;
+      }
 
       h5 {
-        font-size: 20px;
-        margin: 10px 0;
-        color: $color-secondary;
+        padding: 20px 0;
+        border-bottom: 1px solid $color-border;
+        color: $color-primary;
+        font-size: 25px;
       }
 
       p {
-        opacity: 0.9;
+        margin-top: 20px;
       }
 
-      img {
-        // filter: invert(1);
-        height: 85px;
-      }
+      // color: white;
+
+      // h5 {
+      //   font-size: 20px;
+      //   margin: 10px 0;
+      //   color: $color-secondary;
+      // }
+
+      // p {
+      //   opacity: 0.9;
+      // }
+
+      // img {
+      //   // filter: invert(1);
+      //   height: 85px;
+      // }
     }
   }
 

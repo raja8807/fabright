@@ -9,14 +9,14 @@ import { Image } from "react-bootstrap";
 import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 export default function AOSProvider({ children }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
   // Minimum preloader duration
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);
