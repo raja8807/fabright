@@ -4,6 +4,25 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./ExpandOnView.module.scss";
 
+const directions = {
+  left: {
+    hidden: "inset(0 100% 0 0)",
+    visible: "inset(0 0 0 0)",
+  },
+  right: {
+    hidden: "inset(0 0 0 100%)",
+    visible: "inset(0 0 0 0)",
+  },
+  top: {
+    hidden: "inset(0 0 100% 0)",
+    visible: "inset(0 0 0 0)",
+  },
+  bottom: {
+    hidden: "inset(100% 0 0 0)",
+    visible: "inset(0 0 0 0)",
+  },
+};
+
 export default function ExpandOnView({
   children,
   className = "",
@@ -14,25 +33,6 @@ export default function ExpandOnView({
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const directions = {
-    left: {
-      hidden: "inset(0 100% 0 0)",
-      visible: "inset(0 0 0 0)",
-    },
-    right: {
-      hidden: "inset(0 0 0 100%)",
-      visible: "inset(0 0 0 0)",
-    },
-    top: {
-      hidden: "inset(0 0 100% 0)",
-      visible: "inset(0 0 0 0)",
-    },
-    bottom: {
-      hidden: "inset(100% 0 0 0)",
-      visible: "inset(0 0 0 0)",
-    },
-  };
-
   const selectedDirection =
     directions[direction] || directions.left;
 
@@ -41,6 +41,12 @@ export default function ExpandOnView({
 
     if (!element) return;
 
+    // Fallback for older browsers
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -48,7 +54,10 @@ export default function ExpandOnView({
           observer.unobserve(element);
         }
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0,
+        rootMargin: "0px 0px -5% 0px",
+      }
     );
 
     observer.observe(element);
@@ -59,13 +68,14 @@ export default function ExpandOnView({
   return (
     <div
       ref={ref}
-      className={`${styles.wipe} ${className}`}
+      className={`${styles.wipe} ${
+        isVisible ? styles.visible : ""
+      } ${className}`}
       style={{
         "--wipe-hidden": selectedDirection.hidden,
         "--wipe-visible": selectedDirection.visible,
         "--wipe-duration": `${duration}ms`,
         "--wipe-delay": `${delay}ms`,
-        "--wipe-state": isVisible ? 1 : 0,
       }}
     >
       {children}
