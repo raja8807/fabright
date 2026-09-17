@@ -93,11 +93,12 @@ const ContactScreen = () => {
 
                     <div className={styles.CustomInput}>
                       <label className={FONTS.font2} htmlFor="type">
-                        Service Type
+                        Contact Subject
                       </label>
                       <select name="type">
-                        <option value="xx">Type 1</option>
-                        <option value="2">Type 2</option>
+                        <option value="xx">General Inquiry</option>
+                        <option value="2">Support</option>
+                        <option value="2">Consultation</option>
                       </select>
                       {/* <input name="ty" placeholder="Your Email" /> */}
                     </div>
@@ -126,7 +127,7 @@ const ContactScreen = () => {
           width="100%"
           height="450"
           loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
+          referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </ExpandOnView>
     </>

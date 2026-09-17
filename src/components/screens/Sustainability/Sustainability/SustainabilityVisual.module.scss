@@ -1,0 +1,189 @@
+.visual {
+  position: relative;
+
+  width: 100%;
+  max-width: 800px;
+
+  aspect-ratio: 1 / 1;
+
+  background: $color-background-green;
+  overflow: hidden;
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.25) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba($color-primary-light, 0.25) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+}
+
+.image {
+  position: absolute;
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Top-right image */
+
+.imageTopRight {
+  top: 0;
+  right: 0;
+
+  width: 45%;
+  height: 48%;
+}
+
+/* Large left image */
+
+.imageMain {
+  left: 0;
+  bottom: 7%;
+
+  width: 54%;
+  height: 72%;
+}
+
+/* Bottom-right image */
+
+.imageBottomRight {
+  right: 0;
+  bottom: 0;
+
+  width: 40%;
+  height: 43%;
+}
+
+.badge {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 48%;
+  left: 58%;
+
+  width: 180px;
+  aspect-ratio: 1;
+
+  transform: translate(-50%, -50%);
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border-radius: 50%;
+
+    background: $color-white;
+
+    box-shadow: 0 0 0 40px rgba($color-white, 0.8);
+    width: 100%;
+    height: 100%;
+
+    .scroll {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: scale(1.6);
+    }
+  }
+}
+
+.badge img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* Tablet */
+
+@media (max-width: $breakpoint-md) {
+  .visual {
+    max-width: 650px;
+  }
+
+  .badge {
+    width: 32%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: $breakpoint-sm) {
+  .visual {
+    aspect-ratio: 0.95;
+  }
+
+  .imageTopRight {
+    width: 45%;
+    height: 42%;
+  }
+
+  .imageMain {
+    width: 55%;
+    height: 68%;
+  }
+
+  .imageBottomRight {
+    width: 40%;
+    height: 40%;
+  }
+
+  .badge {
+    width: 36%;
+  }
+}
+
+// ----------------------------------------
+
+.circleText {
+  svg {
+    width: 100%;
+    height: 100%;
+    animation: rotateText 12s linear infinite;
+  }
+
+  text {
+    // letter-spacing: 3px;
+    fill: $color-secondary;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

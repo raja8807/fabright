@@ -86,7 +86,7 @@ const ChooseSection = () => {
         <Carousel interval={4000} controls indicators pause={false} touch wrap>
           {cards.map((card, idx) => (
             <Carousel.Item key={card.title}>
-              {<Card data={card} />}
+              {<Card data={card} idx={idx} />}
             </Carousel.Item>
           ))}
         </Carousel>
