@@ -6,11 +6,15 @@ import ChooseSection from "./sections/Choose/Choose";
 import ProjectsSection from "./sections/Projects/Projects";
 import SolutionsSection from "./sections/Solutions/Solutions";
 import FriendlinessSection from "./sections/Friendliness/Friendliness";
+import Stats from "./sections/Stats/Stats";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 export default function Home() {
   return (
     <div className={styles.homeWrapper}>
       <Hero />
+      <Stats />
+
       <AboutSection />
       <ChooseSection />
       <ProjectsSection />

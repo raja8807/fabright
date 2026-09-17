@@ -1,16 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Choose.module.scss";
 import CustomContainer from "@/components/ui/CustomContainer/CustomContainer";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 import { Carousel, Image } from "react-bootstrap";
 
-const Card = ({ data }) => {
+const Card = ({ data, idx }) => {
   return (
-    <div className={styles.card}
-              data-aos="fade-left"
-    
+    <div
+      className={styles.card}
+      data-aos="fade-left"
+      data-aos-delay={`${idx * 100}`}
     >
       <div className={styles.txt}>
         <h3>{data.title}</h3>
@@ -18,10 +19,17 @@ const Card = ({ data }) => {
         <p>{data.text}</p>
       </div>
 
-      <div className={styles.img}>
-        <div className={styles.icon}>
-          <Image src={data.icon} alt="" fluid />
-        </div>
+      <div className={styles.icon}>
+        <Image src={data.icon} alt="" fluid />
+      </div>
+
+      <div className={styles.imgBox}>
+        <div
+          className={styles.img}
+          style={{
+            backgroundImage: `url("/images/choose/card (${idx + 1}).webp")`,
+          }}
+        ></div>
       </div>
     </div>
   );
@@ -32,22 +40,22 @@ const ChooseSection = () => {
     {
       title: "Custom Solar Solutions",
       text: "Designed to fit your space, your needs, and your future.",
-      icon: "/images/feature-icon-1.png",
+      icon: "/images/icons/1.png",
     },
     {
       title: "A Customer-First Experience",
       text: "Transparent process, exceptional service, and 24/7 support—because you deserve the best.",
-      icon: "/images/feature-icon-2.png",
+      icon: "/images/icons/2.png",
     },
     {
       title: "ISO-Certified Excellence",
       text: "Backed by ISO certification, we deliver a promise of durability through storms, stability through change, and energy you can count on for years to come.",
-      icon: "/images/feature-icon-3.png",
+      icon: "/images/icons/3.png",
     },
     {
       title: "Incubated by Visionaries",
       text: "Being backed by T-Hub, India's largest tech incubator, fuels our drive for innovation and bold breakthroughs.",
-      icon: "/images/feature-icon-4.png",
+      icon: "/images/icons/4.png",
     },
   ];
 
@@ -58,7 +66,7 @@ const ChooseSection = () => {
       <CustomContainer>
         <div className={styles.cont}>
           <SectionHeader
-            head="Why Choose Fabright."
+            head="Choose Solar Right, Choose Fabright."
             variant={2}
             title="Services"
             caption="We’re finding ways to bring energy to more people in more ways every day, so that all of us can be part of the changing energy system. Because Powering Progress."
@@ -68,24 +76,17 @@ const ChooseSection = () => {
 
       {/* Desktop */}
       <div className={styles.cards}>
-        {cards.map((card) => (
-          <Card key={card.title} data={card} />
+        {cards.map((card, idx) => (
+          <Card key={card.title} data={card} idx={idx} />
         ))}
       </div>
 
       {/* Mobile */}
       <div className={styles.cardsSm}>
-        <Carousel
-          interval={4000}
-          controls
-          indicators
-          pause={false}
-          touch
-          wrap
-        >
-          {cards.map((card) => (
+        <Carousel interval={4000} controls indicators pause={false} touch wrap>
+          {cards.map((card, idx) => (
             <Carousel.Item key={card.title}>
-              <Card data={card} />
+              {<Card data={card} />}
             </Carousel.Item>
           ))}
         </Carousel>

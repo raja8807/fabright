@@ -32,7 +32,7 @@ const Teamsection = () => {
     {
       title: "raghav",
       text: "Chief Marketing Officer (CMO)",
-      images: "/images/team/raghav.jpg",
+      images: "/images/team/raghav.png",
       name:'Raghav'
     },
     {
@@ -44,19 +44,19 @@ const Teamsection = () => {
     {
       title: "kiran",
       text: "Chief Operating Officer (COO)",
-      images: "/images/team/kiran.jpg",
+      images: "/images/team/kiran.png",
       name:'Kiran'
     },
     {
       title: "sita",
       text: "Chief Financial Officer (CFO)",
-      images: "/images/team/sita.jpg",
+      images: "/images/team/sita.png",
       name:'Sita'
     },
     {
       title: "harsha",
       text: "Chief Technology Officer (CTO)",
-      images: "/images/team/harsha.jpg",
+      images: "/images/team/harsha.png",
       name:'Harsha'
     },
   ];

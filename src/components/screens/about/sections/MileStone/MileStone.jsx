@@ -4,6 +4,7 @@ import CustomContainer from "@/components/ui/CustomContainer/CustomContainer";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 import { Image } from "react-bootstrap";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 const MileStoneSection = () => {
   return (
@@ -35,9 +36,9 @@ const MileStoneSection = () => {
             />
             <CustomButton variant={2}>Explore More</CustomButton>
           </div>
-          <div className={styles.right} data-aos="zoom-out">
+          <ExpandOnView className={styles.right} data-aos="zoom-out">
             <Image src={"/images/milestone.png"} alt="eco-friendly" fluid />
-          </div>
+          </ExpandOnView>
         </div>
       </CustomContainer>
     </section>

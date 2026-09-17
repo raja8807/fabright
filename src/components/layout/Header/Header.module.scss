@@ -1,5 +1,5 @@
 .Header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -53,28 +53,34 @@
     }
 
     .call {
-      color: white;
-      padding-left: 40px;
-      height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      color: white;
+      padding-left: 20px;
       border-left: 1px solid $color-grey-1;
 
-      h4 {
-        margin: 0;
-        font-size: 18px;
-      }
+      .lnk {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      p {
-        color: $color-grey-1;
-        font-size: 14px;
-        margin: 0;
-      }
-
-      &:hover {
         h4 {
-          color: $color-secondary;
+          margin: 0;
+          font-size: 18px;
+        }
+
+        p {
+          color: $color-grey-1;
+          font-size: 14px;
+          margin: 0;
+        }
+
+        &:hover {
+          h4 {
+            color: $color-secondary;
+          }
         }
       }
     }
@@ -90,5 +96,59 @@
         display: none;
       }
     }
+  }
+}
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.hide {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+
+    pointer-events: none;
+  }
+}
+
+.rotate {
+  animation: rotateForwardBackward 1s ease-in-out infinite;
+  width: 40px;
+  height: 40px;
+  @include flexCenter;
+  border-radius: 50%;
+  border: 1px solid rgba($color-border, 0.4);
+}
+
+@keyframes rotateForwardBackward {
+  0%,
+  20% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(25deg);
+  }
+
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  80%,
+  100% {
+    transform: rotate(0deg);
   }
 }

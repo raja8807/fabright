@@ -75,8 +75,6 @@
   height: 43%;
 }
 
-/* Center badge */
-
 .badge {
   position: absolute;
 
@@ -85,20 +83,35 @@
   top: 48%;
   left: 58%;
 
-  width: 35%;
+  width: 180px;
   aspect-ratio: 1;
 
   transform: translate(-50%, -50%);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background: $color-white;
+    background: $color-white;
 
-  box-shadow: 0 0 0 12px rgba($color-white, 0.8);
+    box-shadow: 0 0 0 40px rgba($color-white, 0.8);
+    width: 100%;
+    height: 100%;
+
+    .scroll {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: scale(1.6);
+    }
+  }
 }
 
 .badge img {
@@ -146,5 +159,31 @@
 
   .badge {
     width: 36%;
+  }
+}
+
+// ----------------------------------------
+
+.circleText {
+  svg {
+    width: 100%;
+    height: 100%;
+    animation: rotateText 12s linear infinite;
+  }
+
+  text {
+    // letter-spacing: 3px;
+    fill: $color-secondary;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

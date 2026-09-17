@@ -18,17 +18,19 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import { CONTACT_DETAILS } from "@/constants/contact_details";
 
 const Footer = () => {
   const contacts = [
     {
       title: "Call For Services",
-      cont: "+91 98765 3214",
+      cont: CONTACT_DETAILS.phone.text,
       icon: <BsTelephoneFill />,
     },
     {
       title: "Send Us Email",
-      cont: "support@fabright.in",
+      cont: CONTACT_DETAILS.email,
       icon: <BsEnvelopeAtFill />,
     },
     {
@@ -40,6 +42,7 @@ const Footer = () => {
 
   return (
     <div className={styles.Footer}>
+      <ScrollToTop/>
       <CustomContainer>
         <div className={styles.contact}>
           {contacts.map((c) => {

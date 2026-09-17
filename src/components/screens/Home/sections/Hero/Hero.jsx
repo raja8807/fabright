@@ -10,6 +10,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       
+      
       <div className={styles.overlay}></div>
 
       <Image

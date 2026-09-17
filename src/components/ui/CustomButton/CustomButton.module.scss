@@ -5,21 +5,50 @@
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  * {
+    transition: 0.2s ease-in-out;
+  }
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+  }
+
+  &:hover {
+    .bg {
+      transform: scaleY(1);
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
 
   &.variant_1 {
     color: $color-primary;
     border: 1px solid white;
-    &:hover {
+
+    .bg {
       background-color: $color-primary;
+    }
+    &:hover {
       color: white;
     }
   }
+
   &.variant_2 {
     color: white;
     border: 1px solid white;
     background-color: $color-primary;
-    &:hover {
-      background-color: $color-primary-hover;
+    .bg {
+      background-color: $color-secondary;
     }
   }
 }

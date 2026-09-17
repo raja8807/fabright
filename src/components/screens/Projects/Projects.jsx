@@ -5,6 +5,7 @@ import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 import CustomContainer from "@/components/ui/CustomContainer/CustomContainer";
 import { Image } from "react-bootstrap";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 const ProjectsScreen = () => {
   const projects = [
@@ -88,9 +89,9 @@ const ProjectsScreen = () => {
                     caption={preject.description}
                   />
                 </div>
-                <div className="">
+                <ExpandOnView className="">
                   <Image src={preject.images} alt={preject.text} />
-                </div>
+                </ExpandOnView>
               </div>
             );
           })}

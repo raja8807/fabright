@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Overview.module.scss";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
 import { Image } from "react-bootstrap";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 const OverviewSection = () => {
   return (
@@ -19,9 +20,9 @@ const OverviewSection = () => {
             variant={2}
           />
 
-          <div className={styles.right} data-aos="fade-left">
+          <ExpandOnView className={styles.right} data-aos="fade-left">
             <Image src={"/logo/logo.png"} alt="about-logo" fluid />
-          </div>
+          </ExpandOnView>
         </div>
       </CustomContainer>
     </div>

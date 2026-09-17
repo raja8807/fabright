@@ -4,28 +4,32 @@ import React from "react";
 import styles from "./Projects.module.scss";
 import FONTS from "@/styles/fonts";
 import { Plus } from "lucide-react";
+import Link from "next/link";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data, idx }) => {
   return (
-    <div className={styles.ProjectCard}
-              data-aos="fade-up"
-    
+    <Link
+      href={"/projects"}
+      className={styles.ProjectCard}
+      data-aos="fade-up"
+      data-aos-delay={idx * 100}
     >
-      <div className={styles.imgWrap}>
+      <ExpandOnView className={styles.imgWrap}>
         <div
           className={styles.img}
           style={{
             backgroundImage: `url("${data.images}")`,
           }}
         ></div>
-      </div>
+      </ExpandOnView>
       <div className={styles.txt}>
         <div className={styles.button}>
           <Plus />
         </div>
         <h4 className={FONTS.font2}>{data.text}</h4>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -68,8 +72,8 @@ const ProjectsSection = () => {
       </CustomContainer>
 
       <div className={styles.projectCards}>
-        {projects.map((p) => (
-          <ProjectCard key={p.title} data={p} />
+        {projects.map((p, idx) => (
+          <ProjectCard key={p.title} data={p} idx={idx} />
         ))}
       </div>
     </section>

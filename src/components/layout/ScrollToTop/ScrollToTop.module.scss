@@ -1,0 +1,85 @@
+.scrollToTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+
+  //   width: var(--button-size, 40px);
+  //   height: var(--button-size, 40px);
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #064b91;
+    outline-offset: 5px;
+  }
+
+  .progressBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: var(--stroke-width, 3px);
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+      #064b91 var(--progress, 0%),
+      #dcdcdc var(--progress, 0%)
+    );
+
+    transition: background 0.1s linear;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #064b91;
+    background: #fff;
+    border-radius: 50%;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+  }
+
+  &:hover .arrow {
+    color: #fff;
+    background: #064b91;
+  }
+}
+
+@media (max-width: 767px) {
+  .scrollToTop {
+    right: 18px;
+    bottom: 18px;
+  }
+}

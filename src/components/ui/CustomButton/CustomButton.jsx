@@ -9,11 +9,11 @@ const CustomButton = ({ children, variant = 1 }) => {
     ${FONTS.font2}
     ${styles[`variant_${variant}`]}
     `}
-
-              data-aos="fade-up"
-
+      data-aos="fade-up"
     >
-      {children}
+      <div className={styles.bg}/>
+
+      <span>{children}</span>
     </button>
   );
 };

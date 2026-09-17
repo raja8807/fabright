@@ -4,18 +4,19 @@ import React from "react";
 import styles from "./SolarSolutions.module.scss";
 import FONTS from "@/styles/fonts";
 import { Plus } from "lucide-react";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 
 const ProjectCard = ({ data }) => {
   return (
     <div className={styles.ProjectCard} data-aos="fade-up">
-      <div className={styles.imgWrap}>
+      <ExpandOnView className={styles.imgWrap}>
         <div
           className={styles.img}
           style={{
             backgroundImage: `url("${data.images}")`,
           }}
         ></div>
-      </div>
+      </ExpandOnView>
       <div className={styles.txt}>
         {/* <div className={styles.button}>
           <Plus />
@@ -40,7 +41,7 @@ const SolarSolutionsSection = () => {
           long-term savings and clean energy you can count on.
         </>
       ),
-      images: "/images/services/services1.png",
+      images: "/images/services/Solar Rooftop.jpg",
       name: "Solar Rooftop - Slash Your Energy Bills, Sustainably",
     },
     {
@@ -54,7 +55,8 @@ const SolarSolutionsSection = () => {
         </>
       ),
 
-      images: "/images/services/services2.png",
+      images: "/images/services/Solar Street Lights.jpg",
+
       name: "Solar Street Lights - Brighten Your World, Naturally",
     },
     {
@@ -67,7 +69,8 @@ const SolarSolutionsSection = () => {
           homes, farms, and businesses.
         </>
       ),
-      images: "/images/services/services3.png",
+      images: "/images/services/Solar Insect Trap.jpg",
+
       name: "Solar Insect Trap - Eco-Friendly Pest Control",
     },
     {
@@ -80,7 +83,8 @@ const SolarSolutionsSection = () => {
           sustainability—without the hassle of traditional building.
         </>
       ),
-      images: "/images/services/services4.png",
+      images: "/images/services/Prefabrication.jpg",
+
       name: "Prefabrication Solutions - Smarter, Faster, Stronger",
     },
     {
@@ -92,7 +96,8 @@ const SolarSolutionsSection = () => {
           durable workspaces, making expansion effortless and cost-effective.
         </>
       ),
-      images: "/images/services/services5.png",
+      images: "/images/services/Mezzanine Floors.jpg",
+
       name: "Mezzanine Floors - Expand Without Building More",
     },
     {
@@ -105,7 +110,8 @@ const SolarSolutionsSection = () => {
           no emissions, just pure solar power.
         </>
       ),
-      images: "/images/services/services6.png",
+      images: "/images/services/Solar Water Pumps.jpg",
+
       name: "Solar Water Pumps - Harness the Sun for Endless Water Flow",
     },
   ];

@@ -22,7 +22,7 @@ const FriendlinessSection = () => {
               data-aos="zoom-out"
           
           >
-            <Image src={"/images/eco-friendly.jpg"} alt="eco-friendly" fluid />
+            <Image src={"/images/eco-friendly.png"} alt="eco-friendly" fluid />
           </div>
         </div>
       </CustomContainer>
