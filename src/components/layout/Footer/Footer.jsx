@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import { CONTACT_DETAILS } from "@/constants/contact_details";
+import { NAV_LINKS } from "@/constants/constants";
 
 const Footer = () => {
   const contacts = [
@@ -42,7 +43,7 @@ const Footer = () => {
 
   return (
     <div className={styles.Footer}>
-      <ScrollToTop/>
+      <ScrollToTop />
       <CustomContainer>
         <div className={styles.contact}>
           {contacts.map((c) => {
@@ -89,18 +90,22 @@ const Footer = () => {
 
           <div className={styles.links}>
             <h5>Quick Links</h5>
-            <Link href={"#"}>Home</Link>
-            <Link href={"#"}>About Us</Link>
-            <Link href={"#"}>Solutions</Link>
-            <Link href={"#"}>Projects</Link>
-            <Link href={"#"}>Sustainability</Link>
+            {NAV_LINKS.map((link) => {
+              return (
+                <Link key={link.title} href={link.href}>
+                  {link.title}
+                </Link>
+              );
+            })}
           </div>
 
           <div className={styles.address}>
             <h2>FABRIGHT SOLUTIONS PRIVATE LIMITED</h2>
             <p>
-              T-Hub Phase 2, 20, Inorbit Mall Rd,<br/> 
-              Vittal Rao Nagar, Madhapur,<br/>
+              T-Hub Phase 2, 20, Inorbit Mall Rd,
+              <br />
+              Vittal Rao Nagar, Madhapur,
+              <br />
               Hyderabad, Telangana - 500081.
             </p>
             <strong>36AAFCF2532A1Z8</strong>

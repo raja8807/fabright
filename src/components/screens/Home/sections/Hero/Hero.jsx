@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       
-      
+
       <div className={styles.overlay}></div>
 
       <Image
@@ -25,7 +25,7 @@ const Hero = () => {
           <div className={styles.left}>
             <p className={FONTS.font2} data-aos="fade-right">
               {" "}
-              SOLARVA SOLAR ENERGY SERVICES INC{" "}
+              FABRIGHT SOLAR ENERGY SERVICES{" "}
             </p>
             <h1 className={FONTS.font2} data-aos="fade-right">
               Fueling Tomorrow with the

@@ -49,7 +49,7 @@ const SustainabilityVisual = () => {
 
           <Image
             src="/images/sustainability1.png"
-            alt="Solarva Solar Energy Services"
+            alt="Fabright Solar Energy Services"
           />
         </div>
       </div>

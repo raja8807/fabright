@@ -23,7 +23,7 @@ const AboutVisual = () => {
       <div className={styles.badge}>
         <Image
           src="/images/about/4.webp"
-          alt="Solarva Solar Energy Services"
+          alt="Solar Energy Services"
         />
       </div>
     </div>

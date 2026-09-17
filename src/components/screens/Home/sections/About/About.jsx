@@ -38,7 +38,7 @@ const AboutSection = () => {
               <h4 className={FONTS.font2}
               
               data-aos="fade-down"
-              >Solarva Solar Energy specialty:</h4>
+              >Fabright Solar Energy specialty:</h4>
               <div className={styles.gridWrap}>
                 <p data-aos="fade-left">
                   <CheckCircle2 />

@@ -5,6 +5,7 @@
       padding: 50px 0;
 
       display: flex;
+
       border-bottom: 1px solid $color-border;
       gap: 50px;
       > div {
@@ -17,6 +18,14 @@
 
       &:nth-child(odd) {
         flex-direction: row-reverse;
+      }
+
+      @include respond-below(md) {
+        flex-direction: column-reverse !important;
+
+        > div {
+          width: 100%;
+        }
       }
     }
   }

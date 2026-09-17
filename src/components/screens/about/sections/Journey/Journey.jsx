@@ -44,28 +44,7 @@ const JourneySection = () => {
               excellence.
             </p>
 
-            {/* <div className={styles.points}>
-              <h4 className={FONTS.font2} data-aos="fade-down">
-                Solarva Solar Energy specialty:
-              </h4>
-              <div className={styles.gridWrap}>
-                <p data-aos="fade-left">
-                  <CheckCircle2 />
-                  Custom Solar Solutions
-                </p>
-                <p data-aos="fade-left">
-                  <CheckCircle2 />A Customer-First Experience
-                </p>
-                <p data-aos="fade-left">
-                  <CheckCircle2 />
-                  ISO-Certified Excellence
-                </p>
-                <p data-aos="fade-left">
-                  <CheckCircle2 />
-                  Incubated by Visionaries
-                </p>
-              </div>
-            </div> */}
+
 
             <CustomButton variant={2}>Explore More</CustomButton>
           </div>
