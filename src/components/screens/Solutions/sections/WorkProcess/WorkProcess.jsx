@@ -46,7 +46,7 @@ const WorkProcessSection = () => {
           {CARDS.map((c) => {
             return (
               <div key={c.title} className={styles.card} data-aos="zoom-in">
-                <Image src={c.icon} alt="icon" />
+                {/* <Image src={c.icon} alt="icon" /> */}
                 <h5>{c.title}</h5>
                 <p>{c.text}</p>
               </div>
