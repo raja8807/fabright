@@ -24,7 +24,7 @@ const ProjectCard = ({ data }) => {
 
             <div className={styles.social}>
               <BsLinkedin />
-              <BsTwitter />
+              
               <BsInstagram />
               <BsFacebook />
             </div>

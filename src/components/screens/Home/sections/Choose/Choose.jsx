@@ -56,7 +56,7 @@ const ChooseSection = () => {
     },
     {
       title: "Round-the-clock Support every Step of the Way",
-      text: "From installation to maintenance, our team is always here to support you.",
+      text: "From installation to maintenance, our team is always here to support you.  team is always here to support you.",
       icon: "/images/icons/4.png",
     },
   ];

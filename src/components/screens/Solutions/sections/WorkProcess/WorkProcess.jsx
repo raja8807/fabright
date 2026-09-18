@@ -56,7 +56,7 @@ const WorkProcessSection = () => {
           </div>
 
           <div className={styles.right} data-aos="fade-up">
-            <Image src={"/images/solution-avatar.png"} alt="solution" fluid />
+            <Image src={"/images/solution-indian.webp"} alt="solution" fluid />
           </div>
         </div>
       </CustomContainer>

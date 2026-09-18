@@ -14,6 +14,7 @@ import { Image } from "react-bootstrap";
 import {
   FaFacebookF,
   FaInstagram,
+  FaLinkedin,
   FaPinterestP,
   FaTwitter,
   FaYoutube,
@@ -28,16 +29,19 @@ const Footer = () => {
       title: "Call For Services",
       cont: CONTACT_DETAILS.phone.text,
       icon: <BsTelephoneFill />,
+      href: `tel:${CONTACT_DETAILS.phone.number}`,
     },
     {
       title: "Send Us Email",
       cont: CONTACT_DETAILS.email,
       icon: <BsEnvelopeAtFill />,
+      href: `mailto:${CONTACT_DETAILS.email}`,
     },
     {
       title: "Visit Our Location",
       cont: "Hyderabad, Telangana",
       icon: <BsGeoAltFill />,
+      href: "#",
     },
   ];
 
@@ -48,7 +52,7 @@ const Footer = () => {
         <div className={styles.contact}>
           {contacts.map((c) => {
             return (
-              <Link href={"#"} key={c.title} className={styles.contactBox}>
+              <Link href={c.href} key={c.title} className={styles.contactBox}>
                 <div className={styles.content}>
                   <div className={styles.icon}>{c.icon}</div>
                   <div className={styles.text}>
@@ -66,23 +70,31 @@ const Footer = () => {
             <Image src={"/logo/logo.png"} alt="logo" width={200} />
 
             <div className={styles.socials}>
-              <Link href="#" aria-label="Twitter">
-                <FaTwitter />
-              </Link>
-
-              <Link href="#" aria-label="Facebook">
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/share/1HrSHZTH5y/?mibextid=wwXIfr"
+                aria-label="Facebook"
+              >
                 <FaFacebookF />
               </Link>
 
-              <Link href="#" aria-label="Instagram">
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/fabrightsolutions?igsh=d2R3aWoxaTd0M2Fp"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </Link>
 
-              <Link href="#" aria-label="Pinterest">
-                <FaPinterestP />
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/fabright/"
+                aria-label="YouTube"
+              >
+                <FaLinkedin />
               </Link>
 
-              <Link href="#" aria-label="YouTube">
+              <Link target="_blank" href="#" aria-label="YouTube">
                 <FaYoutube />
               </Link>
             </div>
