@@ -34,7 +34,9 @@ const MileStoneSection = () => {
                 </>
               }
             />
-            <CustomButton variant={2}>Explore More</CustomButton>
+            <CustomButton variant={2} href={"/contact"}>
+              Contact Us
+            </CustomButton>
           </div>
           <ExpandOnView className={styles.right} data-aos="zoom-out">
             <Image src={"/images/milestone.png"} alt="eco-friendly" fluid />

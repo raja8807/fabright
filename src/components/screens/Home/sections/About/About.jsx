@@ -10,7 +10,7 @@ import AboutVisual from "./AboutVisual/AboutVisual";
 
 const AboutSection = () => {
   return (
-    <section className={styles.AboutSection}>
+    <section className={styles.AboutSection} id="about">
       <CustomContainer lg>
         <div className={styles.wrap}>
           <div className={styles.left} data-aos="fade-right">
@@ -35,10 +35,9 @@ const AboutSection = () => {
             </p>
 
             <div className={styles.points}>
-              <h4 className={FONTS.font2}
-              
-              data-aos="fade-down"
-              >Fabright Solar Energy specialty:</h4>
+              <h4 className={FONTS.font2} data-aos="fade-down">
+                Fabright Solar Energy specialty:
+              </h4>
               <div className={styles.gridWrap}>
                 <p data-aos="fade-left">
                   <CheckCircle2 />
@@ -58,7 +57,9 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <CustomButton variant={2}>Explore More</CustomButton>
+            <CustomButton variant={2} href={"/about"}>
+              Explore More
+            </CustomButton>
           </div>
         </div>
         {/* 

@@ -37,7 +37,9 @@ const Hero = () => {
               solar panel installation services.
             </h2>
             <div data-aos="fade-right">
-              <CustomButton>Explore Fabright</CustomButton>
+              <CustomButton
+              href={'#about'}
+              >Explore Fabright</CustomButton>
             </div>
           </div>
         </div>

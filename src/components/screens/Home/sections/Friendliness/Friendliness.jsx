@@ -16,12 +16,11 @@ const FriendlinessSection = () => {
               head="Inspired by Nature. Sustained for Nature."
               caption="At Fabright, sustainability drives everything we do. Our mission is to deliver cutting-edge, energy-efficient solutions and premium products that empower a brighter future for both the planet and its people. We are dedicated to working in harmony with nature, continually evolving to make meaningful strides toward a cleaner, greener world, and fostering sustainable progress every step of the way."
             />
-            <CustomButton variant={2}>Explore More</CustomButton>
+            <CustomButton variant={2} href={"/contact"}>
+              Explore More
+            </CustomButton>
           </div>
-          <div className={styles.right}
-              data-aos="zoom-out"
-          
-          >
+          <div className={styles.right} data-aos="zoom-out">
             <Image src={"/images/eco-friendly.png"} alt="eco-friendly" fluid />
           </div>
         </div>

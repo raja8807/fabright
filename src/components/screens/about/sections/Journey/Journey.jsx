@@ -46,7 +46,7 @@ const JourneySection = () => {
 
 
 
-            <CustomButton variant={2}>Explore More</CustomButton>
+            {/* <CustomButton variant={2}>Explore More</CustomButton> */}
           </div>
         </div>
         {/* 

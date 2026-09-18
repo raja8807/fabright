@@ -100,7 +100,11 @@ const ProjectsScreen = () => {
         <section>
           <SectionHeader
             head={"Ready to create your own solar success story? Let’s talk!"}
-            cta={<CustomButton variant={2}>Get Started</CustomButton>}
+            cta={
+              <CustomButton variant={2} href={"/contact"}>
+                Get Started
+              </CustomButton>
+            }
           />
         </section>
       </CustomContainer>

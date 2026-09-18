@@ -37,7 +37,6 @@ const SolutionsSection = () => {
       text: "Sustainable water solutions, straight from the sun.",
       icon: "/images/solutions/6.png",
     },
-   
   ];
 
   return (
@@ -52,16 +51,21 @@ const SolutionsSection = () => {
               }
             />
           </div>
-          <ExpandOnView direction="bottom" className={styles.float} data-aos="fade-up"></ExpandOnView>
+          <ExpandOnView
+            direction="bottom"
+            className={styles.float}
+            data-aos="fade-up"
+          ></ExpandOnView>
         </div>
       </CustomContainer>
       <div className={styles.cards}>
-        {CARDS.map((c,idx) => {
+        {CARDS.map((c, idx) => {
           return (
-            <div key={c.title} className={styles.card}
+            <div
+              key={c.title}
+              className={styles.card}
               data-aos="zoom-in"
               data-aos-delay={idx * 100}
-            
             >
               <Image src={c.icon} alt="icon" />
               <h5>{c.title}</h5>
@@ -71,7 +75,9 @@ const SolutionsSection = () => {
         })}
       </div>
       <div className={styles.btn}>
-        <CustomButton>Discover Our Solar Solutions</CustomButton>
+        <CustomButton href={"/solutions"}>
+          Discover Our Solar Solutions
+        </CustomButton>
       </div>
     </section>
   );
