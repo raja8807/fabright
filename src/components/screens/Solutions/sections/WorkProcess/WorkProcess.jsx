@@ -2,8 +2,10 @@ import React from "react";
 import styles from "./WorkProcess.module.scss";
 import CustomContainer from "@/components/ui/CustomContainer/CustomContainer";
 import SectionHeader from "@/components/common/SectionHeader/SectionHeader";
-import { Image } from "react-bootstrap";
+
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
+import { Image } from "react-bootstrap";
+import ExpandOnView from "@/components/common/ExpandOnView/ExpandOnView";
 const WorkProcessSection = () => {
   const CARDS = [
     {
@@ -30,33 +32,34 @@ const WorkProcessSection = () => {
 
   return (
     <section className={styles.WorkProcessSection}>
-      <CustomContainer lg>
-        <div className={styles.head}>
-          <div className={styles.header}>
-            <SectionHeader
-              variant={2}
-              title={"Work Process"}
-              head={"Precision in Every Step, Excellence in Every Project"}
-            />
+      <CustomContainer>
+        <SectionHeader
+          variant={2}
+          centered
+          head={"Work Process"}
+          caption={"Precision in Every Step, Excellence in Every Project"}
+        />
+        <div className={styles.wrap}>
+          <div className={styles.left}>
+            {CARDS.map((card, idx) => {
+              return (
+                <ExpandOnView
+                  delay={idx * 100}
+                  key={card.title}
+                  className={styles.card}
+                >
+                  <h4>{card.title}</h4>
+                  <p>{card.text}</p>
+                </ExpandOnView>
+              );
+            })}
           </div>
-          <div className={styles.float} data-aos="fade-up"></div>
-        </div>
 
-        <div className={styles.cards}>
-          {CARDS.map((c) => {
-            return (
-              <div key={c.title} className={styles.card} data-aos="zoom-in">
-                {/* <Image src={c.icon} alt="icon" /> */}
-                <h5>{c.title}</h5>
-                <p>{c.text}</p>
-              </div>
-            );
-          })}
+          <div className={styles.right} data-aos="fade-up">
+            <Image src={"/images/solution-avatar.png"} alt="solution" fluid />
+          </div>
         </div>
       </CustomContainer>
-      <div className={styles.btn}>
-        <CustomButton>Discover Our Solar Solutions</CustomButton>
-      </div>
     </section>
   );
 };

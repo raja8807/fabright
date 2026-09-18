@@ -25,6 +25,7 @@
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
     flex-wrap: wrap;
     // justify-content: center;
     gap: 20px;
@@ -88,7 +89,7 @@
 
   @include respond-below(md) {
     .cards {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 30px;
 
       .card {
