@@ -45,6 +45,10 @@ export default function AOSProvider({ children }) {
     return () => clearTimeout(timer);
   }, [isLoading]);
 
+  if (true) {
+    return children;
+  }
+
   return (
     <>
       {!isHidden && (

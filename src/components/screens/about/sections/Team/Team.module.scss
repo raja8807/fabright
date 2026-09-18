@@ -46,29 +46,69 @@
       color: $color-secondary;
     }
 
-    .button {
+    .cta {
       position: absolute;
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      top: -40%;
+      bottom: 60%;
       right: 24px;
-      background-color: $color-primary;
-      border: 5px solid white;
-      cursor: pointer;
+      * {
+        transition: 0.2s;
+      }
+      .button {
+        height: 70px;
+        width: 70px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        border: 5px solid white;
+        cursor: pointer;
+        @include flexCenter;
 
-      @include flexCenter;
+        .social {
+          flex-direction: column;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          display: none;
 
-      svg {
-        path {
-          color: white;
+          transform: scaleY(0);
+
+          svg {
+            font-size: 20px;
+
+            // &:hover {
+            //   display: none;
+            //   color: $color-secondary;
+            // }
+          }
+        }
+
+        svg {
+          // font-weight: 500;
+          // font-size: 24px;
+          path {
+            color: white;
+          }
         }
       }
     }
   }
 
   &:hover {
-    transform: scale(1.01);
-    box-shadow: 0 43.505px 72.509px rgba(74, 74, 74, 0.07);
+    .txt {
+      .cta {
+        .button {
+          height: 200px;
+          border-radius: 100px;
+
+          > svg {
+            display: none;
+          }
+
+          .social {
+            display: flex !important;
+            transform: scaleY(1);
+          }
+        }
+      }
+    }
   }
 }

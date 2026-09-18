@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./Team.module.scss";
 import FONTS from "@/styles/fonts";
 import { Plus } from "lucide-react";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const ProjectCard = ({ data }) => {
   return (
@@ -17,9 +18,18 @@ const ProjectCard = ({ data }) => {
         ></div>
       </div>
       <div className={styles.txt}>
-        {/* <div className={styles.button}>
-          <Plus />
-        </div> */}
+        <div className={styles.cta}>
+          <div className={styles.button}>
+            <Plus />
+
+            <div className={styles.social}>
+              <BsLinkedin />
+              <BsTwitter />
+              <BsInstagram />
+              <BsFacebook />
+            </div>
+          </div>
+        </div>
         <h3 className={FONTS.font2}>{data.name}</h3>
         <p>{data.text}</p>
       </div>
@@ -33,31 +43,31 @@ const Teamsection = () => {
       title: "raghav",
       text: "Chief Marketing Officer (CMO)",
       images: "/images/team/raghav.png",
-      name:'Raghav'
+      name: "Raghav",
     },
     {
       title: "durga",
       text: "Founder & Chief Executive Officer (CEO)",
       images: "/images/team/durga.png",
-      name:'Durga Prasad'
+      name: "Durga Prasad",
     },
     {
       title: "kiran",
       text: "Chief Operating Officer (COO)",
       images: "/images/team/kiran.png",
-      name:'Kiran'
+      name: "Kiran",
     },
     {
       title: "sita",
       text: "Chief Financial Officer (CFO)",
       images: "/images/team/sita.png",
-      name:'Sita'
+      name: "Sita",
     },
     {
       title: "harsha",
       text: "Chief Technology Officer (CTO)",
       images: "/images/team/harsha.png",
-      name:'Harsha'
+      name: "Harsha",
     },
   ];
 
