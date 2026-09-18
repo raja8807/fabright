@@ -22,15 +22,21 @@
   background-color: white;
   box-shadow: 0 43.505px 72.509px rgba(104, 104, 104, 7%);
   cursor: pointer;
+
+  * {
+    transition: 0.2s ease-in-out;
+  }
   .imgWrap {
     // height: 350px;
+    overflow: hidden;
+    border-radius: 0 0 0 100px;
 
     .img {
       background-color: white;
       width: 100%;
       aspect-ratio: 1 / 1;
       background-size: contain;
-      border-radius: 0 0 0 100px;
+      transform-origin: top;
       // border-radius: 50%;
     }
   }
@@ -50,9 +56,7 @@
       position: absolute;
       bottom: 60%;
       right: 24px;
-      * {
-        transition: 0.2s;
-      }
+
       .button {
         height: 70px;
         width: 70px;
@@ -93,6 +97,12 @@
   }
 
   &:hover {
+    .imgWrap {
+      .img {
+        transform: scale(1.05) rotate(1deg);
+      }
+    }
+
     .txt {
       .cta {
         .button {
